@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import HeroAirBnb from "./components/HeroAirBnb";
 import NavbarAirBnb from "./components/NavbarAirBnb";
 import Card from "./components/Card";
+import Props from "./components/Props";
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
       <Interests />
       <Footer />
      <Navbar />
-      <Main /> */}
+      <Main /> 
       <NavbarAirBnb />
       <HeroAirBnb />
       <Card />
-      <Footer />
+      <Footer />*/}
+      <Props />
     </div>
   );
 }
