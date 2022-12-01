@@ -2,14 +2,23 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-  background-color: hsl(0, 4%, 19%);
+  background-color: hsl(0, 3%, 27%);
   color: white;
   font-family: "Inter", sans-serif;
   margin: 0;
   height: 100vh;
+}
+
+.App {
+  background-color: rgba(0, 0, 0, 0.644);
+  width: 350px;
+  border-radius: 15px 15px 0 0;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
 .navbar {
@@ -61,4 +70,94 @@ ul > li {
 
 ul {
   margin-left: 20px;
+}
+
+/* task 1 */
+
+.info-sec {
+  text-align: center;
+  border-radius: 15px 15px 0 0;
+  padding-bottom: 20px;
+}
+
+.info-sec > img {
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+}
+
+.info-sec > h3 {
+  margin: 10px 0 5px;
+}
+
+.info-sec > p {
+  font-size: 15px;
+  padding-bottom: 17px;
+}
+
+.info-sec > p:last-child {
+  font-size: 13px;
+}
+
+.btn-group > button {
+  border-radius: 10px;
+  border: none;
+  width: 130px;
+  padding: 7px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 35px;
+}
+
+.btn-group > button:last-child {
+  background-color: #24a0ed;
+  color: white;
+}
+
+.btn-icon {
+  margin-right: 5px;
+  font-size: 15px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.about-section {
+  margin: 10px 35px;
+  padding-bottom: 20px;
+}
+
+.about-section > h5 {
+  margin-bottom: 3px;
+}
+
+.about-section > p:last-child {
+  font-size: 13px;
+}
+
+#task1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 70px;
+
+  background-color: black;
+}
+
+#task1 button {
+  background-color: grey;
+  border: none;
+  height: 25px;
+  border-radius: 2px;
+  cursor: pointer;
 }
