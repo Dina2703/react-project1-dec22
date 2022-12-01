@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import HeroAirBnb from "./components/HeroAirBnb";
 import NavbarAirBnb from "./components/NavbarAirBnb";
 import Card from "./components/Card";
-import Props from "./components/Props";
+import Props from "./components/TimeOfDay";
 
 function App() {
   return (
