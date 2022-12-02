@@ -9,12 +9,7 @@ function TravelCards() {
     return <TravelCard key={item.id} {...item} />;
   });
 
-  return (
-    <div>
-      <h4>TravelCards</h4>
-      {travelCards}
-    </div>
-  );
+  return <div>{travelCards}</div>;
 }
 
 export default TravelCards;
