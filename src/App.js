@@ -6,9 +6,11 @@
 // import Interests from "./components/Interests";
 // import Props from "./components/TimeOfDay";
 // import Cats from "./components/Cats";
-import AirbnbPage from "./components/AirbnbPage";
+// import AirbnbPage from "./components/AirbnbPage";
 // import Joke from "./components/Joke";
 // import jokesData from "./jokesData";
+
+import TravelJournal from "./components/TravelJournal";
 
 function App() {
   // console.log(jokesData);
@@ -35,8 +37,9 @@ function App() {
       <Cats />
       <Main />
       
-      {jokeElements}*/}
       <AirbnbPage />
+      {jokeElements}*/}
+      <TravelJournal />
     </div>
   );
 }
