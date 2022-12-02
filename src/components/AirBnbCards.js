@@ -3,23 +3,13 @@ import Card from "./Card";
 import data from "../airbnba-data";
 
 function AirBnbCards() {
-  return (
-    <div className="airbnb-cards">
-      {data.map((each) => {
-        return (
-          <Card
-            img={each.coverImg}
-            rating={each.stats.rating}
-            reviewCount={each.stats.reviewCount}
-            location={each.location}
-            title="Life lessons with Katie Zaferes"
-            price={each.price}
-            color="red"
-          />
-        );
-      })}
-    </div>
-  );
+  //build cards Component
+  const cards = data.map((item) => {
+    //we can do item={item}  or {...item} to spread the props of the object(item).
+    return <Card key={item.id} {...item} />;
+  });
+  //render
+  return <div className="airbnb-cards">{cards}</div>;
 }
 
 export default AirBnbCards;

@@ -204,8 +204,6 @@ button:hover {
 
 .airbnb-cards {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .airbnb-card {
@@ -215,12 +213,26 @@ button:hover {
   padding-bottom: 20px;
   font-size: 15px;
   margin-bottom: 50px;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
 }
 
 .airbnb-card > img {
   width: 100%;
   min-height: 200px;
   border-radius: 9px;
+}
+
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
 .card-stats {

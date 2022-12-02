@@ -27,7 +27,7 @@ const data = [
       reviewCount: 56,
     },
     location: "Online",
-    openSpots: 2,
+    openSpots: 0,
   },
   {
     id: 3,
@@ -43,6 +43,51 @@ const data = [
     },
     location: "Online",
     openSpots: 3,
+  },
+  {
+    id: 4,
+    title: "Dome - Bamboo Villa in Eco Six Bali",
+    description:
+      "Located just a 20-minute scooter ride from the vibrant centre of Ubud, the Dome is a newly built one bedroom bamboo cabin situated within the Eco Six Resort.",
+    price: 500,
+    coverImg:
+      "https://a0.muscache.com/im/pictures/6d3f81b5-affa-4c13-8681-4081d2568be6.jpg?im_w=480",
+    stats: {
+      rating: 5.0,
+      reviewCount: 100,
+    },
+    location: "Online",
+    openSpots: 3,
+  },
+  {
+    id: 5,
+    title: "Dome - Bamboo Villa in Eco Six Bali",
+    description:
+      "Located just a 20-minute scooter ride from the vibrant centre of Ubud, the Dome is a newly built one bedroom bamboo cabin situated within the Eco Six Resort.",
+    price: 500,
+    coverImg:
+      "https://a0.muscache.com/im/pictures/6d3f81b5-affa-4c13-8681-4081d2568be6.jpg?im_w=480",
+    stats: {
+      rating: 5.0,
+      reviewCount: 100,
+    },
+    location: "Online",
+    openSpots: 0,
+  },
+  {
+    id: 6,
+    title: "Dome - Bamboo Villa in Eco Six Bali",
+    description:
+      "Located just a 20-minute scooter ride from the vibrant centre of Ubud, the Dome is a newly built one bedroom bamboo cabin situated within the Eco Six Resort.",
+    price: 500,
+    coverImg:
+      "https://a0.muscache.com/im/pictures/6d3f81b5-affa-4c13-8681-4081d2568be6.jpg?im_w=480",
+    stats: {
+      rating: 5.0,
+      reviewCount: 100,
+    },
+    location: "Online",
+    openSpots: 0,
   },
 ];
 

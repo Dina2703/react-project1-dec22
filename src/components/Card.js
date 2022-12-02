@@ -1,10 +1,40 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 
-function Card({ img, rating, reviewCount, location, title, price, color }) {
+function Card({
+  coverImg,
+  rating,
+  reviewCount,
+  location,
+  title,
+  price,
+  color,
+  openSpots,
+}) {
+  //if you passed the data in item={item} way, destructure 'item' obj
+  // const {
+  //   coverImg,
+  //   rating,
+  //   reviewCount,
+  //   location,
+  //   title,
+  //   price,
+  //   color,
+  //   openSpots,
+  // } = item;
+
+  //logic for badge text
+  let badgeText;
+  if (openSpots === 0) {
+    badgeText = "SOLD OUT";
+  } else if (location === "Online") {
+    badgeText = "Online";
+  }
+
   return (
     <div className="airbnb-card">
-      <img src={img} alt="" />
+      {badgeText && <div className="card--badge">{badgeText}</div>}
+      <img src={coverImg} alt="" />
       <div className="airbnb-card-content">
         <div className="card-stats">
           <FaStar color={color} />
