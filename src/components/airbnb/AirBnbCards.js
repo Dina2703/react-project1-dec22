@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "./Card";
-import data from "../airbnba-data";
+import Card from "../Card";
+import data from "../../airbnba-data";
 
 function AirBnbCards() {
   //build cards Component
@@ -9,7 +9,7 @@ function AirBnbCards() {
     return <Card key={item.id} {...item} />;
   });
   //render
-  return <div className="airbnb-cards">{cards}</div>;
+  return <div className="airbnb-cards scroll">{cards}</div>;
 }
 
 export default AirBnbCards;

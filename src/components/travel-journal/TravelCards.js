@@ -1,6 +1,6 @@
 import React from "react";
 import TravelCard from "./TravelCard";
-import travelData from "../travel-data";
+import travelData from "../../travel-data";
 
 function TravelCards() {
   console.log(travelData);

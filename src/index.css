@@ -206,6 +206,12 @@ button:hover {
   display: flex;
 }
 
+.scroll {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
 .airbnb-card {
   background-color: #f8f3ec;
   margin: 0 16px;
