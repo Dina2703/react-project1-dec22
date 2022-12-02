@@ -48,7 +48,7 @@ body {
 }
 
 .main-section {
-  background: url(./images/logo512.png);
+  background: url(../public/images/logo512.png);
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: center;
@@ -188,7 +188,7 @@ button:hover {
 
 #hero-airbnb > img {
   width: 100%;
-  height: 300px;
+  height: 100%;
 }
 
 #hero-airbnb > h3 {
@@ -202,9 +202,15 @@ button:hover {
   font-size: 15px;
 }
 
+.airbnb-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .airbnb-card {
   background-color: #f8f3ec;
-  margin: 0 66px;
+  margin: 0 16px;
   width: 200px;
   padding-bottom: 20px;
   font-size: 15px;
@@ -213,6 +219,7 @@ button:hover {
 
 .airbnb-card > img {
   width: 100%;
+  min-height: 200px;
   border-radius: 9px;
 }
 

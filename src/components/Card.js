@@ -1,19 +1,20 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-function Card() {
+
+function Card({ img, rating, reviewCount, location, title, price, color }) {
   return (
     <div className="airbnb-card">
-      <img src="https://www.w3schools.com/w3images/avatar6.png" alt="" />
+      <img src={img} alt="" />
       <div className="airbnb-card-content">
         <div className="card-stats">
-          <FaStar color="red" />
-          <span>5.0</span>
-          <span>(6)&#x2022;</span>
-          <span>USA</span>
+          <FaStar color={color} />
+          <span>{rating}</span>
+          <span>({reviewCount})&#x2022;</span>
+          <span>{location}</span>
         </div>
-        <p>Life lessons with Katie Zaferes</p>
+        <p>{title}</p>
         <p>
-          <span style={{ fontWeight: "bold" }}>From $136</span> /person
+          <span style={{ fontWeight: "bold" }}>From ${price}</span> /person
         </p>
       </div>
     </div>
