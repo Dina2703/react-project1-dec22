@@ -23,146 +23,11 @@ body {
   margin-top: 50px;
 } */
 
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  height: 90px;
-  background-color: black;
-}
-
-.nav--logo_text {
-  margin-right: auto;
-  color: #61dafb;
-  font-weight: 700;
-  font-size: 25px;
-}
-.nav--icon {
-  height: 50px;
-  margin-right: 7px;
-}
-
-.nav--little {
-  color: #deebf8;
-  font-weight: 600;
-}
-
-.main-section {
-  background: url(../public/images/logo512.png);
-  background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: center;
-  background-size: contain;
-}
-
-.title {
-  font-size: 39px;
-  padding-left: 20px;
-}
-
 /* change the list bullet color */
-ul li::marker {
+/* ul li::marker {
   color: #61dafb;
   font-size: 1.4rem;
-}
-
-ul > li {
-  padding-bottom: 20px;
-}
-
-ul {
-  margin-left: 20px;
-}
-
-/* task 1 */
-
-.info-sec {
-  text-align: center;
-  border-radius: 15px 15px 0 0;
-  padding-bottom: 20px;
-}
-
-.info-sec > img {
-  border-radius: 15px 15px 0 0;
-  width: 100%;
-}
-
-.info-sec > h3 {
-  margin: 10px 0 5px;
-}
-
-.info-sec > p {
-  font-size: 15px;
-  padding-bottom: 17px;
-}
-
-.info-sec > p:last-child {
-  font-size: 13px;
-}
-
-.btn-group > button {
-  border-radius: 10px;
-  border: none;
-  width: 130px;
-  padding: 7px;
-}
-
-.btn-group {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 35px;
-}
-
-.btn-group > button:last-child {
-  background-color: #24a0ed;
-  color: white;
-}
-
-.btn-icon {
-  margin-right: 5px;
-  font-size: 15px;
-}
-
-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.about-section {
-  margin: 10px 35px;
-  padding-bottom: 20px;
-}
-
-.about-section > h5 {
-  margin-bottom: 3px;
-}
-
-.about-section > p:last-child {
-  font-size: 13px;
-}
-
-#task1 {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 70px;
-
-  background-color: black;
-}
-
-#task1 button {
-  background-color: grey;
-  border: none;
-  height: 25px;
-  border-radius: 2px;
-  cursor: pointer;
-}
+} */
 
 /* airbnb-logo project */
 .airbnb-nav {
@@ -257,6 +122,7 @@ button:hover {
   padding-bottom: 8px;
 }
 
+/* Cats Profile project */
 .card-cat {
   background-color: rgb(234, 227, 227);
   width: 250px;
@@ -295,6 +161,7 @@ button:hover {
   flex-wrap: wrap;
 }
 
+/* Travel Jouranl project */
 #travel--navbar {
   background-color: rgba(32, 129, 214, 0.96);
   height: 62px;
