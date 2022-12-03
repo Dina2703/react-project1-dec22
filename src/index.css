@@ -260,3 +260,77 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
+
+/*  Meme Generator Project*/
+#meme-navbar {
+  height: 60px;
+  background: linear-gradient(to right, #9c64e6, #6a6fa7dc);
+  color: whitesmoke;
+}
+
+.meme-navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 13px 40px;
+  width: 100%;
+}
+
+.meme-navbar-container > img {
+  width: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.meme-navbar-container > h3 {
+  flex: 1;
+  letter-spacing: 0.5px;
+}
+
+.meme-navbar-container > p {
+  word-spacing: 3px;
+  font-size: small;
+}
+
+.meme-form {
+  max-width: 450px;
+  margin: auto;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.input-group input {
+  width: 210px;
+  padding: 5px 8px;
+  border: 1px solid rgba(131, 130, 130, 0.5);
+  border-radius: 4px;
+}
+
+.meme-form > button {
+  width: 450px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #9c64e6, #6a6fa7dc);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.meme-form > button:hover {
+  transform: scale(0.98);
+}
+
+.meme-form span {
+  padding-right: 4px;
+}
