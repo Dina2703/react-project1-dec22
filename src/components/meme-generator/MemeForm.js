@@ -4,9 +4,9 @@ import axios from "axios";
 
 function MemeForm() {
   const [memes, setMemes] = useState(null);
-  const [randomMeme, setRandomMeme] = useState(null);
+  const [randomMemeUrl, setRandomMemeUrl] = useState("");
   // console.log(memes);
-  console.log(randomMeme);
+  console.log(randomMemeUrl);
 
   //fetch data from the Api
   const getAllMemes = () => {
@@ -28,8 +28,8 @@ function MemeForm() {
   //get random meme from the array of memes
   function getRandomMeme() {
     const randomMemeId = Math.floor(Math.random() * memes.length);
-    const memeToDisplay = memes[randomMemeId];
-    setRandomMeme(memeToDisplay);
+    const url = memes[randomMemeId].url;
+    setRandomMemeUrl(url);
   }
 
   //Handle button click
@@ -51,7 +51,7 @@ function MemeForm() {
         </button>
       </form>
       <div className="random-meme-img">
-        {randomMeme && <img src={randomMeme.url} alt="" />}
+        {randomMemeUrl && <img src={randomMemeUrl} alt="" />}
       </div>
     </div>
   );
