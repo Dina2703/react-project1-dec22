@@ -328,9 +328,22 @@ body {
 }
 
 .meme-form > button:hover {
+  background: linear-gradient(to right, #7349a9, #6a6fa7dc);
+}
+
+.meme-form > button:active {
   transform: scale(0.98);
 }
 
 .meme-form span {
   padding-right: 4px;
+}
+
+.random-meme-img {
+  width: 300px;
+  margin: auto;
+}
+
+.random-meme-img > img {
+  width: 100%;
 }
