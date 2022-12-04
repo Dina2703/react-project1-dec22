@@ -5,7 +5,16 @@ import axios from "axios";
 function MemeForm() {
   const [memes, setMemes] = useState(null);
   const [randomMemeUrl, setRandomMemeUrl] = useState("");
-  // console.log(memes);
+
+  const [meme, setMeme] = useState({
+    topText: "TopText",
+    bottomText: "BottomText",
+    randomImg: "http://i.imgflip.com/1bij.jpg",
+  });
+
+  const [allMemeImages, setAllMemeImages] = useState(memes);
+
+  console.log(memes);
   console.log(randomMemeUrl);
 
   //fetch data from the Api
@@ -29,7 +38,12 @@ function MemeForm() {
   function getRandomMeme() {
     const randomMemeId = Math.floor(Math.random() * memes.length);
     const url = memes[randomMemeId].url;
-    setRandomMemeUrl(url);
+    setMeme((prev) => {
+      return {
+        ...prev,
+        randomImg: url,
+      };
+    });
   }
 
   //Handle button click
@@ -42,8 +56,8 @@ function MemeForm() {
     <div>
       <form action="" className="meme-form">
         <div className="input-group">
-          <input type="text" placeholder="Shut up" />
-          <input type="text" placeholder="and take my money" />
+          <input type="text" placeholder={meme.topText} />
+          <input type="text" placeholder={meme.bottomText} />
         </div>
         <button type="submit" className="form-btn" onClick={(e) => onclick(e)}>
           <span> Get a new meme image </span>
@@ -51,7 +65,7 @@ function MemeForm() {
         </button>
       </form>
       <div className="random-meme-img">
-        {randomMemeUrl && <img src={randomMemeUrl} alt="" />}
+        {meme.randomImg && <img src={meme.randomImg} alt="" />}
       </div>
     </div>
   );
