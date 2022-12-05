@@ -1,5 +1,6 @@
-import React from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import Rating from "./Rating";
 
 function Card({
   coverImg,
@@ -23,12 +24,18 @@ function Card({
   //   openSpots,
   // } = item;
 
+  const [isFilled, setIsFilled] = useState(true);
+
   //logic for badge text
   let badgeText;
   if (openSpots === 0) {
     badgeText = "SOLD OUT";
   } else if (location === "Online") {
     badgeText = "Online";
+  }
+
+  function handleRating() {
+    setIsFilled((prev) => !prev);
   }
 
   return (
@@ -46,6 +53,7 @@ function Card({
         <p>
           <span style={{ fontWeight: "bold" }}>From ${price}</span> /person
         </p>
+        <Rating isFilled={isFilled} handleRating={handleRating} />
       </div>
     </div>
   );

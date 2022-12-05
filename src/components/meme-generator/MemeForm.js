@@ -4,7 +4,7 @@ import axios from "axios";
 
 function MemeForm() {
   const [memes, setMemes] = useState(null);
-  const [randomMemeUrl, setRandomMemeUrl] = useState("");
+  // const [randomMemeUrl, setRandomMemeUrl] = useState("");
 
   const [meme, setMeme] = useState({
     topText: "TopText",
@@ -14,11 +14,11 @@ function MemeForm() {
 
   const [allMemeImages, setAllMemeImages] = useState(memes);
 
-  console.log(memes);
-  console.log(randomMemeUrl);
+  // console.log(memes);
+  // console.log(randomMemeUrl);
 
-  //fetch data from the Api
-  const getAllMemes = () => {
+  //fetch data from the Api when page loaded
+  useEffect(() => {
     axios
       .get("https://api.imgflip.com/get_memes")
       .then((response) => {
@@ -27,11 +27,6 @@ function MemeForm() {
         setMemes(memesData.data.memes);
       })
       .catch((err) => console.log(`Error: ${err}`));
-  };
-
-  //fetch data when page loaded
-  useEffect(() => {
-    getAllMemes();
   }, []);
 
   //get random meme from the array of memes
