@@ -1,23 +1,25 @@
 import { useState } from "react";
-import boxes from "./data";
+import data from "./data";
 import Box from "./Box";
 
-export default function Boxesp() {
-  const [squares, setSquares] = useState(boxes);
+function Boxes() {
+  const [boxArr, setBoxArr] = useState(data);
+  // console.log(boxArr);
 
-  function toggle(id) {
-    setSquares((prevSquares) => {
-      return prevSquares.map((square) => {
-        return square.id === id ? { ...square, on: !square.on } : square;
+  function handleClick(id) {
+    console.log("clicked " + id);
+    setBoxArr((prevBoxArr) => {
+      return prevBoxArr.map((each) => {
+        return each.id === id ? { ...each, on: !each.on } : each;
       });
     });
   }
 
-  return (
-    <div className="App">
-      {squares.map((each) => (
-        <Box key={each.id} on={each.on} toggle={toggle} id={each.id} />
-      ))}
-    </div>
-  );
+  const boxComponent = boxArr.map((box) => (
+    <Box key={box.id} box={box} handleClick={handleClick} />
+  ));
+
+  return <div>{boxComponent}</div>;
 }
+
+export default Boxes;

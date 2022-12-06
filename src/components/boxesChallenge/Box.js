@@ -1,6 +1,15 @@
-export default function Box({ on, toggle, id }) {
-  const styles = { background: on ? "#222222" : "transparent" };
-  // console.log(id);
+import React from "react";
 
-  return <div className="box" style={styles} onClick={() => toggle(id)}></div>;
+function Box({ box, handleClick }) {
+  console.log(box);
+  return (
+    <div
+      className={`box ${box.on ? "grey" : "filled"}`}
+      onClick={() => handleClick(box.id)}
+    >
+      Box
+    </div>
+  );
 }
+
+export default Box;

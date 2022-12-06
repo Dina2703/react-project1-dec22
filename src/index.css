@@ -357,3 +357,12 @@ body {
   display: inline-block;
   margin: 10px;
 }
+
+.filled {
+  background-color: #222222;
+  color: white;
+}
+
+.grey {
+  background-color: #d2d0d0;
+}
