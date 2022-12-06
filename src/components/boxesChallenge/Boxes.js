@@ -16,10 +16,10 @@ function Boxes() {
   }
 
   const boxComponent = boxArr.map((box) => (
-    <Box key={box.id} box={box} handleClick={handleClick} />
+    <Box key={box.id} box={box} toggle={() => handleClick(box.id)} />
   ));
 
-  return <div>{boxComponent}</div>;
+  return <div className="box-container">{boxComponent}</div>;
 }
 
 export default Boxes;

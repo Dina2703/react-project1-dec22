@@ -1,12 +1,9 @@
 import React from "react";
 
-function Box({ box, handleClick }) {
+function Box({ box, toggle }) {
   console.log(box);
   return (
-    <div
-      className={`box ${box.on ? "grey" : "filled"}`}
-      onClick={() => handleClick(box.id)}
-    >
+    <div className={`box ${box.on ? "grey" : "filled"}`} onClick={toggle}>
       Box
     </div>
   );
