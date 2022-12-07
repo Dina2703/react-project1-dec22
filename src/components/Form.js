@@ -7,12 +7,13 @@ function Form() {
     email: "",
     comments: "",
     isAgreed: false,
+    employment: "",
   });
-  console.log(formData);
+  console.log(formData.employment);
 
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
-    console.log(e.target);
+    // console.log(e.target);
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
@@ -52,7 +53,45 @@ function Form() {
           rows="4"
           name="comments"
         />
-        <div>
+        <fieldset>
+          <legend>
+            <small>Current employment status</small>
+          </legend>
+          <div className="radio">
+            <input
+              type="radio"
+              name="employment"
+              id="unemployed"
+              value="unemployed"
+              onChange={handleChange}
+              checked={formData.employment === "unemployed"}
+            />
+            <label htmlFor="unemployed">Unemployed</label>
+          </div>
+          <div className="radio">
+            <input
+              type="radio"
+              name="employment"
+              id="part-time"
+              value="part-time"
+              onChange={handleChange}
+              checked={formData.employment === "part-time"}
+            />
+            <label htmlFor="part-time">Part-time</label>
+          </div>
+          <div className="radio">
+            <input
+              type="radio"
+              name="employment"
+              id="full-time"
+              value="full-time"
+              onChange={handleChange}
+              checked={formData.employment === "full-part"}
+            />
+            <label htmlFor="full-time">Full-time</label>
+          </div>
+        </fieldset>
+        <div className="agreed">
           <input
             type="checkbox"
             checked={formData.isAgreed}
