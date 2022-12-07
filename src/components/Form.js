@@ -8,8 +8,9 @@ function Form() {
     comments: "",
     isAgreed: false,
     employment: "",
+    favColor: "",
   });
-  console.log(formData.employment);
+  console.log(formData.favColor);
 
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
@@ -101,7 +102,21 @@ function Form() {
           />
           <label htmlFor="isAgreed">Agree</label>
         </div>
+        <label htmlFor="favColor">What is your favorite color?</label>
 
+        <select
+          name="favColor"
+          id="favColor"
+          value={formData.favColor}
+          onChange={handleChange}
+        >
+          <option value="" disabled>
+            --Choose--
+          </option>
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
         <button>submit</button>
       </form>
     </div>
