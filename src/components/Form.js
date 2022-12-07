@@ -10,7 +10,6 @@ function Form() {
     employment: "",
     favColor: "",
   });
-  console.log(formData.favColor);
 
   function handleChange(e) {
     const { name, value, checked, type } = e.target;
@@ -22,10 +21,17 @@ function Form() {
       };
     });
   }
+
+  function handleSubmit(e) {
+    //to stop refreshing the page
+    e.preventDefault();
+    console.log(formData);
+  }
+
   return (
     <div>
       <h1>Form</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="First Name"
