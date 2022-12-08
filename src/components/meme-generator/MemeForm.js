@@ -3,7 +3,7 @@ import { BsCardImage } from "react-icons/bs";
 import axios from "axios";
 
 function MemeForm() {
-  const [memes, setMemes] = useState(null);
+  const [memes, setMemes] = useState([]);
   // const [randomMemeUrl, setRandomMemeUrl] = useState("");
 
   const [meme, setMeme] = useState({
@@ -12,11 +12,6 @@ function MemeForm() {
     randomImg: "http://i.imgflip.com/1bij.jpg",
   });
   console.log(meme);
-
-  // const [allMemeImages, setAllMemeImages] = useState(memes);
-
-  // console.log(memes);
-  // console.log(randomMemeUrl);
 
   //fetch data from the Api when page loaded
   useEffect(() => {

@@ -4,6 +4,7 @@
 // import Boxes from "./components/boxesChallenge/Boxes";
 // import TravelJournal from "./components/travel-journal/TravelJournal";
 // import Form from "./components/Form";
+// import ApiStarWars from "./components/ApiStarWars";
 import MemeHome from "./components/meme-generator/MemeHome";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <AirbnbPage />
       <Boxes />
       <Form />
+      <ApiStarWars />
     */}
       <MemeHome />
     </div>
