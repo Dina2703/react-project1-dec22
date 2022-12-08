@@ -340,12 +340,27 @@ body {
 }
 
 .random-meme-img {
-  width: 300px;
+  width: 450px;
   margin: auto;
 }
 
-.random-meme-img > img {
-  width: 100%;
+.meme--text {
+  font-size: 40px;
+  color: rgb(white);
+  position: relative;
+  background-color: #d2d0d029;
+}
+
+.top {
+  position: absolute;
+  top: 40px;
+  left: 30px;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
 }
 
 /* For boxes challenge */
@@ -376,6 +391,8 @@ body {
   background-color: #d2d0d0;
 }
 
+/* FORM in REACT */
+/* 
 form {
   display: flex;
   flex-direction: column;
@@ -430,4 +447,4 @@ fieldset {
 .radio label {
   font-size: 13px;
   cursor: pointer;
-}
+} */
