@@ -13,16 +13,25 @@ function MemeForm() {
   });
   console.log(meme);
 
-  //fetch data from the Api when page loaded
+  //fetch data from the Api when page loaded with 'axios'
+  // useEffect(() => {
+  //   axios
+  //     .get("https://api.imgflip.com/get_memes")
+  //     .then((response) => {
+  //       const memesData = response.data;
+  //       // console.log(memesData);
+  //       setMemes(memesData.data.memes);
+  //     })
+  //     .catch((err) => console.log(`Error: ${err}`));
+  // }, []);
+
   useEffect(() => {
-    axios
-      .get("https://api.imgflip.com/get_memes")
-      .then((response) => {
-        const memesData = response.data;
-        // console.log(memesData);
-        setMemes(memesData.data.memes);
-      })
-      .catch((err) => console.log(`Error: ${err}`));
+    async function getMemes() {
+      const res = await fetch("https://api.imgflip.com/get_memes");
+      const data = await res.json();
+      setMemes(data.data.memes);
+    }
+    getMemes();
   }, []);
 
   //get random meme from the array of memes

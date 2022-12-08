@@ -6,18 +6,20 @@
 // import Form from "./components/Form";
 // import ApiStarWars from "./components/ApiStarWars";
 import MemeHome from "./components/meme-generator/MemeHome";
+// import ToggleWindowTracker from "./components/ToggleWindowTracker";
 
 function App() {
   return (
     <div className="App">
       {/*
       <Props />
-      <Cats />
+      // <Cats />
       <TravelJournal />
       <AirbnbPage />
       <Boxes />
       <Form />
       <ApiStarWars />
+      <ToggleWindowTracker />
     */}
       <MemeHome />
     </div>
