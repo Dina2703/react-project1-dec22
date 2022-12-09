@@ -461,6 +461,14 @@ fieldset {
   color: rgb(219, 219, 219);
 }
 
+.light--text {
+  color: rgb(156, 151, 151);
+}
+
+.white--text {
+  color: white;
+}
+
 .react-header {
   display: flex;
   height: 80px;
@@ -482,16 +490,24 @@ fieldset {
 .mode-switch {
   display: flex;
   font-size: 14px;
+  font-weight: 600;
   align-items: center;
   width: 120px;
   justify-content: space-between;
 }
 
-.mode-switch-btns {
+.mode-switch-btns-light {
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 15px;
   background-color: black;
+  height: 20px;
+}
+
+.mode-switch-btns-dark {
+  background-color: #030303;
+  border: 1px solid rgb(253, 249, 249);
+  border-radius: 15px;
   height: 20px;
 }
 
@@ -502,8 +518,12 @@ fieldset {
   border: none;
 }
 
-.dark-text {
-  color: black;
+.light {
+  background-color: white;
+}
+
+.dark {
+  background-color: #222222;
 }
 
 .react-hero {

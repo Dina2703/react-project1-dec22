@@ -1,8 +1,8 @@
 import React from "react";
 
-function ReactHero() {
+function ReactHero({ mode }) {
   return (
-    <section className="react-hero ">
+    <section className={`react-hero ${mode ? null : "dark--body"}`}>
       <h1>Fun facts about React</h1>
       <ul className="react-facts">
         <li>Was first released in 2013</li>
