@@ -453,10 +453,12 @@ fieldset {
 
 .dark--header {
   background-color: black;
+  color: white;
 }
 
 .dark--body {
   background-color: #484646;
+  color: rgb(219, 219, 219);
 }
 
 .react-header {
@@ -504,6 +506,29 @@ fieldset {
   color: black;
 }
 
-.light-text {
-  color: rgb(219, 219, 219);
+.react-hero {
+  height: calc(100vh - 80px);
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.react-hero > h1 {
+  margin-bottom: 40px;
+}
+
+.react-facts {
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #4eb5cf;
+  font-weight: bolder;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
