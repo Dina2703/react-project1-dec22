@@ -7,8 +7,9 @@
 // import ApiStarWars from "./components/ApiStarWars";
 // import MemeHome from "./components/meme-generator/MemeHome";
 // import ToggleWindowTracker from "./components/ToggleWindowTracker";
+// import ReactMain from "./components/modeSwitch/ReactMain";
 
-import ReactMain from "./components/modeSwitch/ReactMain";
+import TenziesPage from "./components/tenzies-game/TenziesPage";
 
 function App() {
   return (
@@ -23,8 +24,10 @@ function App() {
       <ApiStarWars />
       <ToggleWindowTracker />
       <MemeHome />
-    */}
       <ReactMain />
+
+    */}
+      <TenziesPage />
     </div>
   );
 }
