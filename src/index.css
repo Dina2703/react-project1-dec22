@@ -448,3 +448,62 @@ fieldset {
   font-size: 13px;
   cursor: pointer;
 } */
+
+/* React Mode(light-dark) Switch Project */
+
+.dark--header {
+  background-color: black;
+}
+
+.dark--body {
+  background-color: #484646;
+}
+
+.react-header {
+  display: flex;
+  height: 80px;
+  padding: 15px 30px;
+  align-items: center;
+  box-shadow: 0px 2px 3px 0px #928f8f;
+}
+
+.react-header img {
+  width: 40px;
+}
+
+.react-header h3 {
+  flex: 1;
+  margin-left: 6px;
+  color: #61dbfb;
+}
+
+.mode-switch {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  width: 120px;
+  justify-content: space-between;
+}
+
+.mode-switch-btns {
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: black;
+  height: 20px;
+}
+
+.mode--btn {
+  height: 18px;
+  width: 18px;
+  border-radius: 9px;
+  border: none;
+}
+
+.dark-text {
+  color: black;
+}
+
+.light-text {
+  color: rgb(219, 219, 219);
+}

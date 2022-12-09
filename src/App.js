@@ -5,8 +5,10 @@
 // import TravelJournal from "./components/travel-journal/TravelJournal";
 // import Form from "./components/Form";
 // import ApiStarWars from "./components/ApiStarWars";
-import MemeHome from "./components/meme-generator/MemeHome";
+// import MemeHome from "./components/meme-generator/MemeHome";
 // import ToggleWindowTracker from "./components/ToggleWindowTracker";
+
+import ReactMain from "./components/modeSwitch/ReactMain";
 
 function App() {
   return (
@@ -20,8 +22,9 @@ function App() {
       <Form />
       <ApiStarWars />
       <ToggleWindowTracker />
-    */}
       <MemeHome />
+    */}
+      <ReactMain />
     </div>
   );
 }
