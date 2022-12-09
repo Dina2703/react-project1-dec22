@@ -582,7 +582,6 @@ ul li::before {
 .die-item {
   height: 50px;
   width: 50px;
-  background-color: white;
   font-weight: 700;
   display: flex;
   justify-content: center;
