@@ -555,55 +555,52 @@ ul li::before {
 
 /* Tenzies game  */
 
-.tenzies-body {
-  height: calc(100vh - 80px);
-  max-width: 600px;
-  background-color: #4eb5cf;
-  margin: 40px;
-  padding: 80px;
-  overflow: hidden;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.dice-body {
+  background-color: #5a5959;
+  height: 100vh;
+  padding: 49px;
 }
 
-.App {
-  overflow: hidden;
+.dice-inner-layer {
+  background-color: #efebeb;
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+  align-items: center;
+  max-width: 800px;
+  border-radius: 5px;
 }
 
 .dice-container {
   display: grid;
   grid-template: auto auto/repeat(5, 1fr);
-  gap: 20px;
+  gap: 15px;
 }
 
-.die-item {
-  height: 50px;
-  width: 50px;
-  font-weight: 700;
+.die-face {
+  height: 60px;
+  width: 60px;
+  background-color: white;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
+  box-shadow: 1px 1px 2px 2px rgba(88, 83, 83, 0.15);
   cursor: pointer;
 }
 
 .roll-btn {
-  width: 100px;
-  padding: 10px;
-  background-color: #14687d;
+  background-color: rgb(75, 75, 228);
   color: white;
+  width: 110px;
+  padding: 8px;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
   cursor: pointer;
-  letter-spacing: 1px;
-  font-weight: 600;
 }
 
 .roll-btn:active {
-  box-shadow: inset 3px 3px 5px -3px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 5px 5px 10px -3px #2f2c2b;
 }

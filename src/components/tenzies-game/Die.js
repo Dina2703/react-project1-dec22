@@ -1,13 +1,11 @@
 import React from "react";
 
-function Die({ value, isHeld }) {
-  const styles = {
-    backgroundColor: isHeld ? "#59E391" : "white",
-  };
-
+function Die({ die }) {
+  const { value, isHeld } = die;
+  const styles = { backgroundColor: isHeld ? "green" : "" };
   return (
-    <div className="die-item" style={styles}>
-      <div>{value}</div>
+    <div className="die-face" style={styles}>
+      {value}
     </div>
   );
 }

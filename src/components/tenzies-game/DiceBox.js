@@ -3,11 +3,11 @@ import Die from "./Die";
 
 function DiceBox({ dice }) {
   return (
-    <div className="dice-container">
+    <section className="dice-container">
       {dice.map((die) => (
-        <Die value={die.value} key={die.id} isHeld={die.isHeld} />
+        <Die die={die} key={die.id} />
       ))}
-    </div>
+    </section>
   );
 }
 
