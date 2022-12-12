@@ -563,14 +563,14 @@ ul li::before {
 
 .dice-inner-layer {
   background-color: #efebeb;
-  height: calc(100vh - 100px);
+  height: 600px;
   display: flex;
   flex-direction: column;
-
   justify-content: space-around;
   align-items: center;
-  max-width: 800px;
+  max-width: 600px;
   border-radius: 5px;
+  padding: 70px;
 }
 
 .dice-container {
@@ -603,4 +603,9 @@ ul li::before {
 
 .roll-btn:active {
   box-shadow: inset 5px 5px 10px -3px #2f2c2b;
+}
+
+.game-instuction {
+  width: 17rem;
+  text-align: center;
 }
