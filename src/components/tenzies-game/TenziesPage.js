@@ -19,15 +19,19 @@ function TenziesPage() {
     }
     return diceArr;
   }
-
+  // when button clicked
   function rollDice() {
     setDice(allNewDice());
+  }
+
+  function holdDice(id) {
+    console.log(id);
   }
 
   return (
     <main className="dice-body">
       <div className="dice-inner-layer">
-        <DiceBox dice={dice} />
+        <DiceBox dice={dice} holdDice={holdDice} />
         <button className="roll-btn" onClick={rollDice}>
           Roll
         </button>
