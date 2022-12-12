@@ -5,23 +5,30 @@ import { nanoid } from "nanoid";
 function TenziesPage() {
   const [dice, setDice] = useState(allNewDice());
 
+  function generateNewDie() {
+    return {
+      value: Math.ceil(Math.random() * 6),
+      isHeld: false,
+      id: nanoid(),
+    };
+  }
+
   console.log(dice);
   function allNewDice() {
     const diceArr = [];
 
     for (let i = 0; i < 10; i++) {
-      const newDice = {
-        value: Math.ceil(Math.random() * 6),
-        isHeld: true,
-        id: nanoid(),
-      };
+      const newDice = generateNewDie();
       diceArr.push(newDice);
     }
     return diceArr;
   }
+
   // when button clicked
   function rollDice() {
-    setDice(allNewDice());
+    setDice((prevDie) =>
+      prevDie.map((die) => (die.isHeld ? die : generateNewDie()))
+    );
   }
 
   function holdDice(id) {
