@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import DiceBox from "./DiceBox";
 import { nanoid } from "nanoid";
+import Confetti from "react-confetti";
 
 function TenziesPage() {
   const [dice, setDice] = useState(allNewDice());
@@ -37,9 +38,14 @@ function TenziesPage() {
 
   // when button clicked
   function rollDice() {
-    setDice((prevDie) =>
-      prevDie.map((die) => (die.isHeld ? die : generateNewDie()))
-    );
+    if (!isWinner) {
+      setDice((prevDie) =>
+        prevDie.map((die) => (die.isHeld ? die : generateNewDie()))
+      );
+    } else {
+      setIsWinner(false);
+      setDice(allNewDice());
+    }
   }
 
   function holdDice(id) {
@@ -53,6 +59,7 @@ function TenziesPage() {
 
   return (
     <main className="dice-body">
+      {isWinner && <Confetti />}
       <div className="dice-inner-layer">
         <h1>Tenzies</h1>
         <p className="game-instuction">
@@ -60,8 +67,12 @@ function TenziesPage() {
           current value between rolls
         </p>
         <DiceBox dice={dice} holdDice={holdDice} />
-        <button className="roll-btn" onClick={rollDice}>
-          Roll
+        <button
+          className="roll-btn"
+          onClick={rollDice}
+          style={{ backgroundColor: isWinner ? "#c73434" : "blue" }}
+        >
+          {isWinner ? "Set the Game" : "Roll"}
         </button>
       </div>
     </main>
