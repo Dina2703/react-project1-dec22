@@ -25,7 +25,12 @@ function TenziesPage() {
   }
 
   function holdDice(id) {
-    console.log(id);
+    // console.log(id);
+    setDice((prevDice) =>
+      prevDice.map((die) =>
+        die.id === id ? { ...die, isHeld: !die.isHeld } : die
+      )
+    );
   }
 
   return (
